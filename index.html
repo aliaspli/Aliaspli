@@ -36,104 +36,137 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://aliaspli.com/#person",
-  "name": "Ali Alaspli",
-  "alternateName": [
-    "Ali Omar",
-    "Ali Omar Alaspli",
-    "Ali Al-Asbali",
-    "Ali Al Asbali",
-    "Ali Alasbali",
-    "Ali Al Aspli",
-    "Ali Al-Aspli",
-    "Ali Alasabli",
-    "Ali Alasabali",
-    "Ali Al-Sabli",
-    "Ali Alsabali",
-    "علي العسبلي",
-    "علي عمر"
-  ],
-  "givenName": "Ali",
-  "familyName": "Alaspli",
-  "gender": "Male",
-  "nationality": {
-    "@type": "Country",
-    "name": "Libya"
-  },
-  "birthPlace": {
-    "@type": "Place",
-    "name": "Libya"
-  },
-  "homeLocation": {
-    "@type": "Place",
-    "name": "United Kingdom"
-  },
-  "url": "https://aliaspli.com",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://aliaspli.com/AliAlaspli.jpg",
-    "caption": "Ali Alaspli at the United Nations Office at Geneva, 2024"
-  },
-  "description": "Ali Omar, also known as Ali Alaspli, is a Libyan human rights defender and researcher, former prisoner of conscience, and Executive Director of Libya Crimes Watch (LCW), a UK-based organisation documenting human rights violations and advocating for justice and accountability in Libya.",
-  "jobTitle": "Executive Director",
-  "worksFor": {
-    "@type": "NGO",
-    "name": "Libya Crimes Watch",
-    "alternateName": [
-      "LCW",
-      "رصد",
-      "رصد الجرائم في ليبيا"
-    ],
-    "url": "https://lcw.ngo",
-    "foundingDate": "2019",
-    "location": {
-      "@type": "Place",
-      "addressCountry": "GB"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://aliaspli.com/#website",
+      "url": "https://aliaspli.com/",
+      "name": "Ali Alaspli",
+      "inLanguage": "en"
     },
-    "sameAs": [
-      "https://en.wikipedia.org/wiki/Libya_Crimes_Watch",
-      "https://www.wikidata.org/wiki/Q124707107"
-    ]
-  },
-  "memberOf": {
-    "@type": "Organization",
-    "name": "World Organisation Against Torture",
-    "alternateName": "OMCT",
-    "url": "https://omct.org"
-  },
-  "award": "Overseas Writing Contest Award, International Center for Transitional Justice (ICTJ), 2024",
-  "knowsAbout": [
-    "Human Rights",
-    "Libya",
-    "War Crimes Documentation",
-    "Enforced Disappearances",
-    "International Advocacy",
-    "UN Human Rights Mechanisms",
-    "Freedom of Expression",
-    "Transitional Justice"
-  ],
-  "knowsLanguage": [
-    "Arabic",
-    "English"
-  ],
-  "email": "ali@lcw.ngo",
-  "sameAs": [
-    "https://en.wikipedia.org/wiki/Ali_Alaspli",
-    "https://www.wikidata.org/wiki/Q136680124",
-    "https://grokipedia.com/page/Ali_Alaspli",
-    "https://orcid.org/0009-0000-8653-0384",
-    "https://x.com/aliaspli",
-    "https://www.linkedin.com/in/aliaspli",
-    "https://www.instagram.com/aliaspli",
-    "https://www.facebook.com/aliaspli",
-    "https://bsky.app/profile/aliaspli.com",
-    "https://linktr.ee/aliaspli",
-    "https://medium.com/@aliaspli"
+    {
+      "@type": "ProfilePage",
+      "@id": "https://aliaspli.com/#profilepage",
+      "url": "https://aliaspli.com/",
+      "name": "Ali Alaspli",
+      "isPartOf": {
+        "@id": "https://aliaspli.com/#website"
+      },
+      "about": {
+        "@id": "https://aliaspli.com/#person"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://aliaspli.com/#primaryimage"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aliaspli.com/#primaryimage",
+      "url": "https://aliaspli.com/AliAlaspli.jpg",
+      "caption": "Ali Alaspli at the United Nations Office at Geneva, 2024"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aliaspli.com/#person",
+      "name": "Ali Alaspli",
+      "alternateName": [
+        "Ali Omar",
+        "Ali Omar Alaspli",
+        "Ali Al-Asbali",
+        "Ali Al Asbali",
+        "Ali Alasbali",
+        "Ali Al Aspli",
+        "Ali Al-Aspli",
+        "Ali Alasabli",
+        "Ali Alasabali",
+        "Ali Al-Sabli",
+        "Ali Alsabali",
+        "علي العسبلي",
+        "علي عمر"
+      ],
+      "givenName": "Ali",
+      "familyName": "Alaspli",
+      "gender": "Male",
+      "nationality": {
+        "@type": "Country",
+        "name": "Libya"
+      },
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Libya"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "United Kingdom"
+      },
+      "url": "https://aliaspli.com/",
+      "mainEntityOfPage": {
+        "@id": "https://aliaspli.com/#profilepage"
+      },
+      "image": {
+        "@id": "https://aliaspli.com/#primaryimage"
+      },
+      "description": "Ali Omar, also known as Ali Alaspli, is a Libyan human rights defender, researcher, writer, and former prisoner of conscience. He is the Executive Director of Libya Crimes Watch, a UK-based human rights organisation focused on documenting violations in Libya and advocating for justice, accountability, and the rights of victims.",
+      "jobTitle": "Executive Director of Libya Crimes Watch",
+      "worksFor": {
+        "@type": "NGO",
+        "name": "Libya Crimes Watch",
+        "alternateName": [
+          "LCW",
+          "Rasd",
+          "رصد الجرائم في ليبيا"
+        ],
+        "url": "https://lcw.ngo",
+        "foundingDate": "2019",
+        "location": {
+          "@type": "Place",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Libya_Crimes_Watch",
+          "https://www.wikidata.org/wiki/Q124707107"
+        ]
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "World Organisation Against Torture",
+        "alternateName": "OMCT",
+        "url": "https://omct.org"
+      },
+      "award": "Overseas Writing Contest Award, International Center for Transitional Justice, 2024",
+      "knowsAbout": [
+        "Human rights",
+        "Libya",
+        "War crimes documentation",
+        "Enforced disappearances",
+        "International advocacy",
+        "United Nations human rights mechanisms",
+        "Freedom of expression",
+        "Transitional justice"
+      ],
+      "knowsLanguage": [
+        "Arabic",
+        "English"
+      ],
+      "email": "ali@lcw.ngo",
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Ali_Alaspli",
+        "https://www.wikidata.org/wiki/Q136680124",
+        "https://grokipedia.com/page/Ali_Alaspli",
+        "https://orcid.org/0009-0000-8653-0384",
+        "https://x.com/aliaspli",
+        "https://www.linkedin.com/in/aliaspli",
+        "https://www.instagram.com/aliaspli",
+        "https://www.facebook.com/aliaspli",
+        "https://bsky.app/profile/aliaspli.com",
+        "https://linktr.ee/aliaspli",
+        "https://medium.com/@aliaspli"
+      ]
+    }
   ]
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
