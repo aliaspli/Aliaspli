@@ -19,7 +19,6 @@
 
 <!-- ═══════════════════════════════════════════════
      CANONICAL + HREFLANG
-     Trailing slash on both URLs — consistent with EN page
      ═══════════════════════════════════════════════ -->
 <link rel="canonical"  href="https://aliaspli.com/ar/">
 <link rel="alternate"  hreflang="x-default" href="https://aliaspli.com/">
@@ -56,9 +55,6 @@
 
 <!-- ═══════════════════════════════════════════════
      STRUCTURED DATA — JSON-LD
-     Arabic page references the same Person @id
-     as the English page to signal same entity.
-     WebSite @id uses the AR URL to match this page.
      ═══════════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
@@ -93,12 +89,7 @@
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "الرئيسية",
-            "item": "https://aliaspli.com/ar/"
-          }
+          { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://aliaspli.com/ar/" }
         ]
       }
     },
@@ -107,19 +98,9 @@
       "@id": "https://aliaspli.com/#person",
       "name": "علي العسبلي",
       "alternateName": [
-        "علي عمر",
-        "Ali Alaspli",
-        "Ali Omar",
-        "Ali Omar Alaspli",
-        "Ali Al-Asbali",
-        "Ali Al Asbali",
-        "Ali Alasbali",
-        "Ali Al Aspli",
-        "Ali Al-Aspli",
-        "Ali Alasabli",
-        "Ali Alasabali",
-        "Ali Al-Sabli",
-        "Ali Alsabali"
+        "علي عمر","Ali Alaspli","Ali Omar","Ali Omar Alaspli",
+        "Ali Al-Asbali","Ali Al Asbali","Ali Alasbali","Ali Al Aspli",
+        "Ali Al-Aspli","Ali Alasabli","Ali Alasabali","Ali Al-Sabli","Ali Alsabali"
       ],
       "givenName": "علي",
       "familyName": "العسبلي",
@@ -172,31 +153,20 @@
       },
       "award": "جائزة ICTJ للكتابة الخارجية، المركز الدولي للعدالة الانتقالية، 2024",
       "knowsAbout": [
-        "حقوق الإنسان",
-        "ليبيا",
-        "توثيق جرائم الحرب",
-        "الاختفاء القسري",
-        "المناصرة الدولية",
-        "آليات الأمم المتحدة لحقوق الإنسان",
-        "حرية التعبير",
-        "العدالة الانتقالية"
+        "حقوق الإنسان","ليبيا","توثيق جرائم الحرب","الاختفاء القسري",
+        "المناصرة الدولية","آليات الأمم المتحدة لحقوق الإنسان",
+        "حرية التعبير","العدالة الانتقالية"
       ],
       "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "Arabic",
-          "alternateName": "ar"
-        },
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        }
+        { "@type": "Language", "name": "Arabic",  "alternateName": "ar" },
+        { "@type": "Language", "name": "English", "alternateName": "en" }
       ],
       "email": "ali@lcw.ngo",
+      "telephone": "+447496651415",
       "sameAs": [
         "https://aliaspli.com/",
         "https://aliaspli.com/ar/",
+        "https://aliaspli.me/",
         "https://en.wikipedia.org/wiki/Ali_Alaspli",
         "https://www.wikidata.org/wiki/Q136680124",
         "https://grokipedia.com/page/Ali_Alaspli",
@@ -245,8 +215,7 @@
       <img src="https://aliaspli.com/AliAlaspli.png"
            alt="علي العسبلي (علي عمر) — مدافع ليبي عن حقوق الإنسان ومدير منظمة رصد الجرائم في ليبيا"
            width="108" height="108"
-           loading="eager"
-           fetchpriority="high"
+           loading="eager" fetchpriority="high"
            onerror="this.style.display='none';this.parentNode.innerHTML='<span class=\'photo-init\'>ع</span>'">
     </div>
     <p class="hero-tagline">
@@ -258,7 +227,7 @@
 
 <hr class="rule">
 
-<!-- ABOUT -->
+<!-- 01 نبذة -->
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="sec-head">
     <span class="sec-n" aria-hidden="true">01</span>
@@ -277,7 +246,7 @@
 
 <hr class="rule">
 
-<!-- LIBYA CRIMES WATCH -->
+<!-- 02 منظمة رصد الجرائم -->
 <section class="section" id="lcw" aria-labelledby="lcw-title">
   <div class="sec-head">
     <span class="sec-n" aria-hidden="true">02</span>
@@ -300,10 +269,32 @@
 
 <hr class="rule">
 
-<!-- WRITING -->
-<section class="section" id="writing" aria-labelledby="writing-title">
+<!-- 03 الأبحاث والمنشورات -->
+<section class="section" id="research" aria-labelledby="research-title">
   <div class="sec-head">
     <span class="sec-n" aria-hidden="true">03</span>
+    <h2 class="sec-title" id="research-title">الأبحاث والمنشورات</h2>
+  </div>
+  <div class="lcw-block">
+    <div class="orcid-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"
+           alt="شعار ORCID iD"
+           width="72" height="72" loading="lazy">
+    </div>
+    <div class="orcid-text">
+      <h3>ORCID iD</h3>
+      <p>مساهماتي البحثية ومنشوراتي وتقارير منظمة رصد الجرائم في ليبيا مُفهرَسة على ORCID تحت المعرّف <span class="orcid-id">0009-0000-8653-0384</span>.</p>
+      <a href="https://orcid.org/0009-0000-8653-0384" target="_blank" rel="noopener noreferrer me" class="btn-fill">عرض الصفحة على ORCID ↗</a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 04 الكتابات والمنشورات -->
+<section class="section" id="writing" aria-labelledby="writing-title">
+  <div class="sec-head">
+    <span class="sec-n" aria-hidden="true">04</span>
     <h2 class="sec-title" id="writing-title">الكتابات والمنشورات</h2>
   </div>
   <p class="writing-intro">
@@ -351,17 +342,32 @@
 
 <hr class="rule">
 
-<!-- CONTACT -->
+<!-- 05 تواصل -->
 <section class="section" id="contact" aria-labelledby="contact-title">
   <div class="sec-head">
-    <span class="sec-n" aria-hidden="true">04</span>
+    <span class="sec-n" aria-hidden="true">05</span>
     <h2 class="sec-title" id="contact-title">تواصل</h2>
   </div>
   <p class="contact-desc">للاستفسار أو التواصل أو التعاون:</p>
-  <div class="contact-email">
-    <span>البريد الإلكتروني</span>
-    <a href="mailto:ali@lcw.ngo">ali@lcw.ngo</a>
+
+  <div class="contact-grid">
+    <div class="contact-item">
+      <span class="contact-item-label">العمل — رصد الجرائم</span>
+      <a id="email-work" href="#" class="contact-item-value" aria-label="بريد العمل">&#8203;</a>
+      <span class="contact-item-note">حقوق الإنسان، الإعلام، واستفسارات المنظمة</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-item-label">الشخصي</span>
+      <a id="email-personal" href="#" class="contact-item-value" aria-label="البريد الشخصي">&#8203;</a>
+      <span class="contact-item-note">المراسلات العامة وغير المهنية</span>
+    </div>
+    <div class="contact-item full">
+      <span class="contact-item-label">واتساب</span>
+      <a id="link-wa" href="#" target="_blank" rel="noopener noreferrer" class="contact-item-value" aria-label="واتساب">&#8203;</a>
+      <span class="contact-item-note">رسائل فقط — رقم بريطاني</span>
+    </div>
   </div>
+
   <div class="social-row">
     <a href="https://x.com/aliaspli"                target="_blank" rel="noopener noreferrer me" class="social-tag">X / تويتر</a>
     <a href="https://www.linkedin.com/in/aliaspli"   target="_blank" rel="noopener noreferrer me" class="social-tag">LinkedIn</a>
@@ -378,9 +384,48 @@
 <hr class="rule">
 
 <footer>
-  <p>© 2026 علي العسبلي · <a href="https://aliaspli.com/ar/">aliaspli.com</a></p>
+  <p>
+    © 2026 علي العسبلي
+    <span class="footer-sep">·</span>
+    <a href="https://aliaspli.com/ar/">aliaspli.com</a>
+    <span class="footer-sep">·</span>
+    <a href="https://aliaspli.me/" target="_blank" rel="noopener noreferrer me">aliaspli.me</a>
+  </p>
   <p>المدير التنفيذي، <a href="https://lcw.ngo" target="_blank" rel="noopener noreferrer">منظمة رصد الجرائم في ليبيا</a></p>
 </footer>
 
+
+<!-- ═══════════════════════════════════════════════
+     EMAIL / CONTACT PROTECTION
+     Encoded with Base64 — bots scraping raw HTML
+     cannot harvest addresses. Decoded at runtime.
+     ═══════════════════════════════════════════════ -->
+<script>
+(function () {
+  function b(s) { return atob(s); }
+
+  var contacts = {
+    'email-work':    { type: 'mailto', val: b('YWxpQGxjdy5uZ28=') },
+    'email-personal':{ type: 'mailto', val: b('aW5mb0BhbGlhc3BsaS5tZQ==') },
+    'link-wa':       { type: 'url',    val: 'https://wa.me/' + b('NDQ3NDk2NjUxNDE1') }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    Object.keys(contacts).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var c = contacts[id];
+      el.href        = (c.type === 'mailto' ? 'mailto:' : '') + c.val;
+      el.textContent = c.type === 'mailto'
+        ? c.val
+        : '+44\u00a07496\u00a0651415';
+    });
+
+    /* Hero contact button — same work email */
+    var hero = document.querySelector('.hero-contact');
+    if (hero) hero.href = 'mailto:' + b('YWxpQGxjdy5uZ28=');
+  });
+}());
+</script>
 </body>
 </html>
