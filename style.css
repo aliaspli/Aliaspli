@@ -26,9 +26,8 @@
 
 /* ── BASE ── */
 html {
-  font-size: 16px;   /* anchors all rem calculations */
+  font-size: 16px;
   scroll-behavior: smooth;
-  /* offset anchors so sticky bar doesn't overlap them */
   scroll-padding-top: calc(var(--topbar-h) + 12px);
 }
 
@@ -36,7 +35,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 1.0625rem;   /* 17px */
+  font-size: 1.0625rem;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,8 +76,6 @@ hr.rule {
   border-bottom: 1px solid var(--rule);
   display: flex;
   align-items: center;
-  /* In LTR: button sits on the right.
-     In RTL: flex reverses, button ends up on the left visually — correct. */
   justify-content: flex-end;
   padding: 0 24px;
 }
@@ -103,8 +100,6 @@ hr.rule {
   color: var(--white);
   border-color: var(--ink);
 }
-
-/* RTL: no letter-spacing on Arabic labels */
 [dir="rtl"] .lang-btn { letter-spacing: 0; font-size: 0.75rem; }
 
 /* ── HERO ── */
@@ -144,9 +139,6 @@ hr.rule {
   margin-bottom: 26px;
 }
 
-/* Grid: photo beside tagline.
-   LTR: [photo 108px] [text 1fr]
-   RTL: [text 1fr] [photo 108px]  — achieved by order properties */
 .hero-grid {
   display: grid;
   grid-template-columns: 108px 1fr;
@@ -154,10 +146,8 @@ hr.rule {
   align-items: start;
   margin-bottom: 28px;
 }
-[dir="rtl"] .hero-grid {
-  grid-template-columns: 1fr 108px;
-}
-[dir="rtl"] .hero-photo { order: 2; }
+[dir="rtl"] .hero-grid   { grid-template-columns: 1fr 108px; }
+[dir="rtl"] .hero-photo  { order: 2; }
 [dir="rtl"] .hero-tagline { order: 1; }
 
 .hero-photo {
@@ -226,7 +216,6 @@ hr.rule {
   color: var(--ink-muted);
   letter-spacing: 1px;
   flex-shrink: 0;
-  /* always LTR so "01" reads correctly even in RTL context */
   direction: ltr;
   unicode-bidi: embed;
 }
@@ -235,11 +224,9 @@ hr.rule {
   font-size: clamp(1.25rem, 2.8vw, 1.75rem);
   font-weight: 700;
 }
-
-/* RTL: title on the right, number pushed to the end (left) */
-[dir="rtl"] .sec-head { flex-direction: row-reverse; justify-content: flex-end; }
+[dir="rtl"] .sec-head  { flex-direction: row-reverse; justify-content: flex-end; }
 [dir="rtl"] .sec-title { order: 1; }
-[dir="rtl"] .sec-n { order: 2; }
+[dir="rtl"] .sec-n     { order: 2; }
 
 /* ── ABOUT / PROSE ── */
 .prose p {
@@ -275,7 +262,7 @@ hr.rule {
 }
 [dir="rtl"] .about-ref-link { letter-spacing: 0; font-size: 0.75rem; }
 
-/* ── LCW BLOCK ── */
+/* ── LCW BLOCK (shared card layout) ── */
 .lcw-block {
   border: 1px solid var(--rule-dark);
   background: var(--bg-card);
@@ -284,12 +271,10 @@ hr.rule {
   gap: 24px;
   align-items: flex-start;
 }
-/* RTL: logo on the left, text on the right */
-[dir="rtl"] .lcw-logo { order: 2; }
-[dir="rtl"] .lcw-text  { order: 1; flex: 1; }
-
 .lcw-logo { flex-shrink: 0; width: 68px; }
 .lcw-logo img { width: 68px; height: auto; display: block; }
+[dir="rtl"] .lcw-logo { order: 2; }
+[dir="rtl"] .lcw-text  { order: 1; flex: 1; }
 
 .lcw-text h3 {
   font-family: var(--font-display);
@@ -303,6 +288,35 @@ hr.rule {
   line-height: 1.75;
   margin-bottom: 18px;
 }
+
+/* ── ORCID BLOCK — reuses .lcw-block, only logo size differs ── */
+.orcid-logo { flex-shrink: 0; width: 72px; }
+.orcid-logo img { width: 72px; height: auto; display: block; }
+.orcid-text { flex: 1; }
+.orcid-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.orcid-text p {
+  font-size: 0.9063rem;
+  color: var(--ink-mid);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.orcid-id {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline;
+}
+[dir="rtl"] .orcid-logo { order: 2; }
+[dir="rtl"] .orcid-text { order: 1; }
+
+/* ── BUTTONS ── */
 .btn-fill {
   display: inline-flex;
   align-items: center;
@@ -334,7 +348,6 @@ hr.rule {
   border-inline-start: 2px solid var(--rule-dark);
   font-style: italic;
 }
-/* padding-inline-start and border-inline-start flip automatically in RTL */
 .writing-intro strong {
   font-style: normal;
   color: var(--ink-mid);
@@ -372,7 +385,7 @@ hr.rule {
   margin-bottom: 4px;
   line-height: 1.3;
 }
-.pl-desc { font-size: 0.7813rem; color: var(--ink-soft); line-height: 1.55; }
+.pl-desc  { font-size: 0.7813rem; color: var(--ink-soft); line-height: 1.55; }
 .pl-arrow {
   font-family: var(--font-mono);
   font-size: 0.625rem;
@@ -384,35 +397,53 @@ hr.rule {
 /* ── CONTACT ── */
 .contact-desc { font-size: 0.9375rem; color: var(--ink-mid); }
 
-.contact-email {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+/* Two-column contact grid: LCW email | personal email | whatsapp */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
   margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid var(--rule);
+  margin-bottom: 0;
 }
-.contact-email span {
+.contact-item {
+  background: var(--bg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-item-label {
   font-family: var(--font-mono);
-  font-size: 0.625rem;
+  font-size: 0.5938rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--ink-muted);
-  white-space: nowrap;
 }
-[dir="rtl"] .contact-email span { letter-spacing: 0; font-size: 0.75rem; }
-.contact-email a {
+[dir="rtl"] .contact-item-label { letter-spacing: 0; font-size: 0.6875rem; }
+.contact-item-value {
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--ink);
-  border-bottom: 1px solid var(--rule-dark);
-  padding-bottom: 1px;
-  transition: border-color 0.2s;
-  /* email addresses are always LTR regardless of page direction */
   direction: ltr;
   unicode-bidi: embed;
+  word-break: break-all;
+  border-bottom: 1px solid var(--rule-dark);
+  padding-bottom: 1px;
+  transition: border-color 0.18s;
+  align-self: flex-start;
 }
-.contact-email a:hover { border-color: var(--ink); }
+.contact-item-value:hover { border-color: var(--ink); }
+.contact-item-note {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+[dir="rtl"] .contact-item-note { font-size: 0.8125rem; }
+
+/* Full-width item spans both columns */
+.contact-item.full { grid-column: 1 / -1; }
 
 .social-row {
   display: flex;
@@ -463,17 +494,20 @@ footer a {
 }
 footer a:hover { border-color: var(--ink); }
 
+/* Footer separator dot */
+.footer-sep {
+  color: var(--rule-dark);
+  margin: 0 4px;
+}
+
 /* ── ANIMATION ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Respect user's reduced-motion preference */
 @media (prefers-reduced-motion: no-preference) {
-  .hero > * {
-    animation: fadeUp 0.55s ease both;
-  }
+  .hero > * { animation: fadeUp 0.55s ease both; }
   .hero > *:nth-child(1) { animation-delay: .05s; }
   .hero > *:nth-child(2) { animation-delay: .12s; }
   .hero > *:nth-child(3) { animation-delay: .18s; }
@@ -486,10 +520,7 @@ footer a:hover { border-color: var(--ink); }
 @media (max-width: 540px) {
   .section, .hero { padding-inline: 18px; }
 
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-  /* Photo always on top in single-column layout */
+  .hero-grid { grid-template-columns: 1fr !important; }
   .hero-photo {
     order: -1 !important;
     width: 88px;
@@ -497,12 +528,17 @@ footer a:hover { border-color: var(--ink); }
   }
   .hero-tagline { order: 0 !important; }
 
-  .lcw-block {
-    flex-direction: column;
-  }
-  /* In RTL mobile, logo goes back to natural order */
+  .lcw-block { flex-direction: column; }
   [dir="rtl"] .lcw-logo,
   [dir="rtl"] .lcw-text { order: unset; }
+
+  /* ORCID block stacks on mobile too */
+  .lcw-block .orcid-logo,
+  .lcw-block .orcid-text { order: unset; }
+
+  /* Contact grid: single column on small screens */
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-item.full { grid-column: 1; }
 
   footer {
     flex-direction: column;
@@ -513,7 +549,5 @@ footer a:hover { border-color: var(--ink); }
 }
 
 @media (max-width: 360px) {
-  .platform-grid {
-    grid-template-columns: 1fr;
-  }
+  .platform-grid { grid-template-columns: 1fr; }
 }
