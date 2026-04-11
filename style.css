@@ -141,18 +141,18 @@ hr.rule {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 108px 1fr;
-  gap: 24px;
+  grid-template-columns: 136px 1fr;
+  gap: 26px;
   align-items: start;
   margin-bottom: 28px;
 }
-[dir="rtl"] .hero-grid   { grid-template-columns: 1fr 108px; }
+[dir="rtl"] .hero-grid   { grid-template-columns: 1fr 136px; }
 [dir="rtl"] .hero-photo  { order: 2; }
 [dir="rtl"] .hero-tagline { order: 1; }
 
 .hero-photo {
-  width: 108px;
-  height: 108px;
+  width: 136px;
+  height: 136px;
   border-radius: 2px;
   overflow: hidden;
   border: 1px solid var(--rule);
@@ -273,6 +273,11 @@ hr.rule {
 }
 .lcw-logo { flex-shrink: 0; width: 68px; }
 .lcw-logo img { width: 68px; height: auto; display: block; }
+
+/* Wikipedia logo is square and needs slightly more space */
+.lcw-logo.lcw-logo--wiki { width: 80px; }
+.lcw-logo.lcw-logo--wiki img { width: 80px; height: 80px; object-fit: contain; }
+
 [dir="rtl"] .lcw-logo { order: 2; }
 [dir="rtl"] .lcw-text  { order: 1; flex: 1; }
 
@@ -523,8 +528,8 @@ footer a:hover { border-color: var(--ink); }
   .hero-grid { grid-template-columns: 1fr !important; }
   .hero-photo {
     order: -1 !important;
-    width: 88px;
-    height: 88px;
+    width: 112px;
+    height: 112px;
   }
   .hero-tagline { order: 0 !important; }
 
