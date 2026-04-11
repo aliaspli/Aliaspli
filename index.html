@@ -19,8 +19,6 @@
 
 <!-- ═══════════════════════════════════════════════
      CANONICAL + HREFLANG
-     x-default signals the primary/default page
-     Both URLs use trailing slash for consistency
      ═══════════════════════════════════════════════ -->
 <link rel="canonical"  href="https://aliaspli.com/">
 <link rel="alternate"  hreflang="x-default" href="https://aliaspli.com/">
@@ -29,9 +27,6 @@
 
 <!-- ═══════════════════════════════════════════════
      OPEN GRAPH
-     og:type = "website" — "profile" is Facebook-only
-     and breaks rich previews on LinkedIn / X / etc.
-     og:image dimensions are required for proper display
      ═══════════════════════════════════════════════ -->
 <meta property="og:type"             content="website">
 <meta property="og:url"              content="https://aliaspli.com/">
@@ -94,12 +89,7 @@
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://aliaspli.com/"
-          }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aliaspli.com/" }
         ]
       }
     },
@@ -118,19 +108,9 @@
       "@id": "https://aliaspli.com/#person",
       "name": "Ali Alaspli",
       "alternateName": [
-        "Ali Omar",
-        "Ali Omar Alaspli",
-        "Ali Al-Asbali",
-        "Ali Al Asbali",
-        "Ali Alasbali",
-        "Ali Al Aspli",
-        "Ali Al-Aspli",
-        "Ali Alasabli",
-        "Ali Alasabali",
-        "Ali Al-Sabli",
-        "Ali Alsabali",
-        "علي العسبلي",
-        "علي عمر"
+        "Ali Omar","Ali Omar Alaspli","Ali Al-Asbali","Ali Al Asbali",
+        "Ali Alasbali","Ali Al Aspli","Ali Al-Aspli","Ali Alasabli",
+        "Ali Alasabali","Ali Al-Sabli","Ali Alsabali","علي العسبلي","علي عمر"
       ],
       "givenName": "Ali",
       "familyName": "Alaspli",
@@ -183,31 +163,20 @@
       },
       "award": "Overseas Writing Contest Award, International Center for Transitional Justice, 2024",
       "knowsAbout": [
-        "Human rights",
-        "Libya",
-        "War crimes documentation",
-        "Enforced disappearances",
-        "International advocacy",
-        "United Nations human rights mechanisms",
-        "Freedom of expression",
-        "Transitional justice"
+        "Human rights","Libya","War crimes documentation","Enforced disappearances",
+        "International advocacy","United Nations human rights mechanisms",
+        "Freedom of expression","Transitional justice"
       ],
       "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "Arabic",
-          "alternateName": "ar"
-        },
-        {
-          "@type": "Language",
-          "name": "English",
-          "alternateName": "en"
-        }
+        { "@type": "Language", "name": "Arabic",  "alternateName": "ar" },
+        { "@type": "Language", "name": "English", "alternateName": "en" }
       ],
       "email": "ali@lcw.ngo",
+      "telephone": "+447496651415",
       "sameAs": [
         "https://aliaspli.com/",
         "https://aliaspli.com/ar/",
+        "https://aliaspli.me/",
         "https://en.wikipedia.org/wiki/Ali_Alaspli",
         "https://www.wikidata.org/wiki/Q136680124",
         "https://grokipedia.com/page/Ali_Alaspli",
@@ -256,8 +225,7 @@
       <img src="https://aliaspli.com/AliAlaspli.png"
            alt="Ali Alaspli (Ali Omar) — Libyan human rights defender and Executive Director of Libya Crimes Watch"
            width="108" height="108"
-           loading="eager"
-           fetchpriority="high"
+           loading="eager" fetchpriority="high"
            onerror="this.style.display='none';this.parentNode.innerHTML='<span class=\'photo-init\'>A</span>'">
     </div>
     <p class="hero-tagline">
@@ -269,7 +237,7 @@
 
 <hr class="rule">
 
-<!-- ABOUT -->
+<!-- 01 ABOUT -->
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="sec-head">
     <span class="sec-n" aria-hidden="true">01</span>
@@ -288,7 +256,7 @@
 
 <hr class="rule">
 
-<!-- LIBYA CRIMES WATCH -->
+<!-- 02 LIBYA CRIMES WATCH -->
 <section class="section" id="lcw" aria-labelledby="lcw-title">
   <div class="sec-head">
     <span class="sec-n" aria-hidden="true">02</span>
@@ -311,10 +279,32 @@
 
 <hr class="rule">
 
-<!-- WRITING -->
-<section class="section" id="writing" aria-labelledby="writing-title">
+<!-- 03 RESEARCH & PUBLICATIONS -->
+<section class="section" id="research" aria-labelledby="research-title">
   <div class="sec-head">
     <span class="sec-n" aria-hidden="true">03</span>
+    <h2 class="sec-title" id="research-title">Research &amp; Publications</h2>
+  </div>
+  <div class="lcw-block">
+    <div class="orcid-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"
+           alt="ORCID iD logo"
+           width="72" height="72" loading="lazy">
+    </div>
+    <div class="orcid-text">
+      <h3>ORCID iD</h3>
+      <p>Research contributions, publications, and LCW reports are indexed on ORCID under the identifier <span class="orcid-id">0009-0000-8653-0384</span>.</p>
+      <a href="https://orcid.org/0009-0000-8653-0384" target="_blank" rel="noopener noreferrer me" class="btn-fill">View on ORCID ↗</a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- 04 WRITING & PUBLICATIONS -->
+<section class="section" id="writing" aria-labelledby="writing-title">
+  <div class="sec-head">
+    <span class="sec-n" aria-hidden="true">04</span>
     <h2 class="sec-title" id="writing-title">Writing &amp; Publications</h2>
   </div>
   <p class="writing-intro">
@@ -362,17 +352,33 @@
 
 <hr class="rule">
 
-<!-- CONTACT -->
+<!-- 05 CONTACT -->
 <section class="section" id="contact" aria-labelledby="contact-title">
   <div class="sec-head">
-    <span class="sec-n" aria-hidden="true">04</span>
+    <span class="sec-n" aria-hidden="true">05</span>
     <h2 class="sec-title" id="contact-title">Contact</h2>
   </div>
   <p class="contact-desc">For inquiries, correspondence, or collaboration:</p>
-  <div class="contact-email">
-    <span>Email</span>
-    <a href="mailto:ali@lcw.ngo">ali@lcw.ngo</a>
+
+  <div class="contact-grid">
+    <div class="contact-item">
+      <span class="contact-item-label">Work — LCW</span>
+      <!-- email protected: decoded by initContact() on DOMContentLoaded -->
+      <a id="email-work" href="#" class="contact-item-value" aria-label="Work email">&#8203;</a>
+      <span class="contact-item-note">Human rights, media &amp; LCW enquiries</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-item-label">Personal</span>
+      <a id="email-personal" href="#" class="contact-item-value" aria-label="Personal email">&#8203;</a>
+      <span class="contact-item-note">General &amp; non-work correspondence</span>
+    </div>
+    <div class="contact-item full">
+      <span class="contact-item-label">WhatsApp</span>
+      <a id="link-wa" href="#" target="_blank" rel="noopener noreferrer" class="contact-item-value" aria-label="WhatsApp">&#8203;</a>
+      <span class="contact-item-note">Messages only — UK number</span>
+    </div>
   </div>
+
   <div class="social-row">
     <a href="https://x.com/aliaspli"                target="_blank" rel="noopener noreferrer me" class="social-tag">X / Twitter</a>
     <a href="https://www.linkedin.com/in/aliaspli"   target="_blank" rel="noopener noreferrer me" class="social-tag">LinkedIn</a>
@@ -389,9 +395,48 @@
 <hr class="rule">
 
 <footer>
-  <p>© 2026 Ali Alaspli · <a href="https://aliaspli.com/">aliaspli.com</a></p>
+  <p>
+    © 2026 Ali Alaspli
+    <span class="footer-sep">·</span>
+    <a href="https://aliaspli.com/">aliaspli.com</a>
+    <span class="footer-sep">·</span>
+    <a href="https://aliaspli.me/" target="_blank" rel="noopener noreferrer me">aliaspli.me</a>
+  </p>
   <p>Executive Director, <a href="https://lcw.ngo" target="_blank" rel="noopener noreferrer">Libya Crimes Watch</a></p>
 </footer>
 
+
+<!-- ═══════════════════════════════════════════════
+     EMAIL / CONTACT PROTECTION
+     Encoded with Base64 — bots scraping raw HTML
+     cannot harvest addresses. Decoded at runtime.
+     ═══════════════════════════════════════════════ -->
+<script>
+(function () {
+  function b(s) { return atob(s); }
+
+  var contacts = {
+    'email-work':    { type: 'mailto', val: b('YWxpQGxjdy5uZ28=') },
+    'email-personal':{ type: 'mailto', val: b('aW5mb0BhbGlhc3BsaS5tZQ==') },
+    'link-wa':       { type: 'url',    val: 'https://wa.me/' + b('NDQ3NDk2NjUxNDE1') }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    Object.keys(contacts).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var c = contacts[id];
+      el.href       = (c.type === 'mailto' ? 'mailto:' : '') + c.val;
+      el.textContent = c.type === 'mailto'
+        ? c.val
+        : '+44\u00a07496\u00a0651415';   /* non-breaking spaces for display */
+    });
+
+    /* Hero contact button — same work email */
+    var hero = document.querySelector('.hero-contact');
+    if (hero) hero.href = 'mailto:' + b('YWxpQGxjdy5uZ28=');
+  });
+}());
+</script>
 </body>
 </html>
