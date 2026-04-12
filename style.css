@@ -505,6 +505,85 @@ footer a:hover { border-color: var(--ink); }
   margin: 0 4px;
 }
 
+/* ── TIMELINE ── */
+.timeline {
+  position: relative;
+  padding-inline-start: 28px;
+  margin-top: 4px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--rule);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item.tl-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot */
+.tl-item::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: -25px;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rule-dark);
+  border: 2px solid var(--bg);
+  transition: background 0.3s;
+  box-shadow: 0 0 0 1px var(--rule-dark);
+}
+.tl-item.tl-visible::before {
+  background: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+
+.tl-date {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+[dir="rtl"] .tl-date { letter-spacing: 0; font-size: 0.6875rem; }
+
+.tl-text {
+  font-size: 0.9375rem;
+  color: var(--ink-mid);
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+/* Two events same year — indent second */
+.tl-item.tl-sub { padding-bottom: 24px; }
+.tl-item.tl-sub::before { background: var(--rule); box-shadow: 0 0 0 1px var(--rule); }
+.tl-item.tl-sub.tl-visible::before { background: var(--ink-muted); box-shadow: 0 0 0 1px var(--ink-muted); }
+.tl-item.tl-sub .tl-date { opacity: 0; pointer-events: none; } /* hide duplicate year */
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tl-item { opacity: 1; transform: none; transition: none; }
+}
+
 /* ── ANIMATION ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
