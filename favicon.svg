@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Ali Alaspli</title>
+  <rect width="64" height="64" rx="8" fill="#faf8f4"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="6.5" fill="none" stroke="#6f2c2c" stroke-width="3"/>
+  <text x="32" y="41" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700" letter-spacing="-2" fill="#0f0f0f">AA</text>
+  <path d="M18 49H46" stroke="#6f2c2c" stroke-width="3"/>
+</svg>
